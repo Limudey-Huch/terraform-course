@@ -1,0 +1,5 @@
+*.terraform*
+*.tfstate*
+crash.log
+.DS_Store
+01-cloud-and-iac/presentation_cloud-and-iac.pptx
