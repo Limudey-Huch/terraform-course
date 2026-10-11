@@ -1,1 +1,0 @@
-Module that creates an EC2 instance running a python webserver and firewall rules to allow inbound traffic.
