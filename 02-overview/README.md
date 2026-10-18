@@ -23,5 +23,6 @@ AWS Terraform provider documentation: https://registry.terraform.io/providers/ha
 | [003](003/README.md) | + Load Balancer | `aws_lb`, `aws_lb_target_group`, `aws_lb_listener`, `aws_subnets` (data) |
 | [004](004/README.md) | RDS Database (standalone) | `aws_db_instance` |
 | [005](005/README.md) | **טופולוגיה סופית**: EC2 + LB + RDS | שילוב של כל הקודם, עם שרשרת Security Groups מלאה |
+| [challenge-ecs](challenge-ecs/README.md) | **אתגר מסכם**: ECS Fargate + ALB + RDS (לפי חוזים, בלי פתרון) | `aws_ecr_repository`, `aws_ecs_cluster`, `aws_ecs_task_definition`, `aws_ecs_service`, IAM role, log group |
 
 כל תיקייה היא Terraform root module עצמאי — `cd` לתיקייה, `terraform init`, ולהמשיך לפי ההוראות ב-README שלה.
