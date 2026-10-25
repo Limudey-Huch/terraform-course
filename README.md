@@ -43,3 +43,7 @@ Explains different types of testing (manual + automated) for Terraform modules a
 ## 09 - Developer Workflows + CI/CD
 
 Covers how teams can work together with Terraform and how to set up CI/CD pipelines to keep infrastructure environments up to date.
+
+## 10 - HTTPS (TLS + Certificate Authorities)
+
+Explains how HTTPS works (symmetric vs asymmetric encryption, the TLS handshake, what is visible on the wire) and what a Certificate Authority is. Includes hands-on exercises: inspecting real sites with `openssl`/`curl`, building a private CA with the `tls` provider, serving HTTPS from an ALB with an ACM certificate, and (bonus) issuing a real ACM certificate with DNS validation.
