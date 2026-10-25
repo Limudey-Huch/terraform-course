@@ -109,6 +109,10 @@ terraform destroy -auto-approve -var="github_org=<your-org>" -var="github_repo=0
 ```
 ⚠️ מחקו את ה-`app` infra **לפני** ה-`bootstrap-oidc` — אחרת תאבדו את ההרשאה להריץ terraform דרך ה-role לפני שסיימתם.
 
+## אתגר מסכם — CI/CD ל-API שרת-less
+
+אחרי שהבנתם את התרגיל למעלה, יש תרגיל חוזים נפרד ב-[`challenge-cicd/`](challenge-cicd/README.md): Lambda + API Gateway + DynamoDB, ו-pipeline שאתם כותבים בעצמכם (plan ב-PR, apply אחרי merge, smoke test). אין פתרון ואין סקריפט בדיקה.
+
 ## רפרנס נוסף
 דוגמה רשמית של HashiCorp ל-GitHub Actions + Terraform:
 <https://github.com/hashicorp/learn-terraform-github-actions/blob/master/.github/workflows/terraform.yml>

@@ -72,8 +72,13 @@ resource "aws_iam_role" "github_actions" {
           }
           # מגביל את מי שיכול "ללבוש" את התפקיד הזה - רק ה-repo הספציפי שלכם,
           # מכל branch/PR/tag (ה-* בסוף). אפשר להדק עוד יותר ל-"ref:refs/heads/main" בלבד.
+          # שתי תבניות: הפורמט הישן (repo:org/repo) והחדש (repo:org@ID/repo@ID), שבו GitHub
+          # מוסיף ל-sub את ה-ID של הארגון והריפו (use_immutable_subject, ברירת מחדל בריפוים חדשים).
           StringLike = {
-            "token.actions.githubusercontent.com:sub" = "repo:${var.github_org}/${var.github_repo}:*"
+            "token.actions.githubusercontent.com:sub" = [
+              "repo:${var.github_org}/${var.github_repo}:*",
+              "repo:${var.github_org}@*/${var.github_repo}@*:*",
+            ]
           }
         }
       }
